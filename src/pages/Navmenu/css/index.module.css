@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Another Typewriter';
+    src: url('/fonts/atwriter.ttf') format('truetype');
+}
+.navBar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #a35e57;
+    font-family: Another Typewriter;
+}
+
+.navBar ul{
+    list-style-type: none; /* Remove bullets */
+
+    display: flex;
+
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.navBar ul li{
+
+    margin-top: 15px;
+    margin-right: 20px;
+    color: white;
+
+    text-decoration: none;
+    height: auto;
+}
+
+.navBar ul li::marker {
+    display: none;
+}
+
+.alink, .alinkYes {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 4.5vh;
+    top: 15px;
+}
+
+.alinkYes {
+    color: #e5bbad;
+}
+
+.IconMenu {
+    position:relative; 
+    width:300px;
+    height:auto;
+    
+    top: -50px;
+    left: -10px;
+    cursor: pointer;
+}
+
+.IconMenu {
+    transition: transform 0.3s ease;
+}
+
+    .IconMenu:hover {
+        transform: scale(1.1);
+    }
+
+
+.divider {
+    position: absolute;
+    width: 4px;
+    height: 70%;
+
+    background-color: #d5ab9a;
+}

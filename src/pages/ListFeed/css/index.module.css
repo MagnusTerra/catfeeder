@@ -1,0 +1,245 @@
+@font-face {
+    font-family: 'Another Typewriter';
+    src: url('/fonts/atwriter.ttf') format('truetype');
+}
+
+.catHours {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 63%;
+    height: 100%;
+
+    background-color: #cc938c;
+}
+
+.nothingCat {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 37%;
+    height: 100%;
+
+    background-color: #e5bbad;
+}
+
+.faceCat {
+    position: absolute;
+
+
+    text-align: center;
+
+    top: 35%;
+
+    left: 0%;
+}
+
+.faceCatImg  {
+    margin-left: 70px;
+}
+
+.faceCat .faceCatImg {
+    width: 300px;
+    height: auto;
+}
+
+
+
+.faceCat .footerTitle {
+    text-align: center;
+    font-family: Another Typewriter;
+    width: 80%;
+    margin-left: 50px;
+    color: #a35e57;
+}
+
+.FoodTable {
+    position: absolute;
+
+    top: 30%;
+
+    width: 80%;
+
+    left: 10%;
+
+    height: 50%;
+
+    overflow-y: auto;
+}
+
+.catHours h1 {
+    position: relative;
+    margin-top: 13%;
+    margin-left: 10%;
+    font-size: 40px;
+    font-family: Another Typewriter;
+    color: white;
+}
+
+.FoodTable table {
+    text-align: center;
+    font-family: Another Typewriter;
+    border: 2px solid #ffd699;
+}
+
+.FoodTable th {
+    color: white;
+    text-align: center;
+    background-color :#cc7479;
+    padding: 10px;
+    border-bottom: 2px solid #ffd699;
+    border-right: 1px solid #ffd699;
+}
+
+.FoodTable td {
+   
+    padding: 10px;
+    text-align: left;
+    background-color: #f1dbc9;
+    border-bottom: 3px solid #ffd699;
+    border-right: 3px solid #ffd699;
+    text-align: center;
+}
+
+.FoodTable button{
+    background-color: #9a5e55;
+    padding: 10px;
+    font-family: Another Typewriter;
+    font-size: 15px;
+    color: white;
+    border: none;
+
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.catHoursAlert {
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    bottom: 2%;
+    display:flex;
+    width: 80%;
+    text-align: center;
+}
+
+.catHoursAlert h2 {
+    width: 100%;
+    top: 20px;
+    left: 60px;
+
+    font-family: Another Typewriter;
+    color: white;
+    margin-right: 20px;
+}
+
+.catHoursAlert button {
+    background-color: #a35e57;
+    height: 50%;
+
+    border: none;
+    color: white;
+    font-family: Another Typewriter;
+    margin-top: 40px;
+    font-size: 2.5vh;
+
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.catHoursAlert button {
+    transition: transform 0.3s ease; /* Transición suave */
+  }
+  
+  .catHoursAlert button:hover {
+    transform: scale(1.1); /* Escala del 120% cuando el cursor está encima */
+  }
+
+.NewHour {
+    position: absolute;
+    width: 63%;
+    height: 100%;
+    top: 0;
+    right: 0;
+
+    background-color:#cc938c;
+}
+
+.newHourClose {
+    position: absolute;
+
+    top: 18%;
+    right: 5%;
+
+    z-index: 4000;
+}
+
+
+
+.newHourMain {
+    position: absolute;
+
+    font-family: Another Typewriter;
+
+    width: 90%;
+    height: 60%;
+
+    top: 20%;
+    left: 10%;
+
+    color: white;
+    font-size: 3vh;
+}
+
+.newHourBox {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+
+    border: 5px dotted white;
+    display: flex;
+}
+
+.newHourBox .NHD {
+    position: absolute;
+    width: 140px;
+    height: auto;
+
+
+    top: 40px;
+    margin-left: 20px;
+}
+
+
+
+.newHourBox .NHD2 {
+    position: absolute;
+    top: 40px;
+    left: 30%;
+    width: 190px;
+}
+
+.newHourBox .NHD3 {
+    position: absolute;
+    top: 40px;
+    left: 65%;
+    width: 150px;
+}
+
+.NHDSaveB{
+    position: absolute;
+    bottom: -5%;
+    right: -2%;
+    background-color: #cc7479;
+
+    color: white;
+}
+

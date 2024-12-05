@@ -1,0 +1,44 @@
+{
+  "name": "catfeeder",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.13.5",
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/icons-material": "^6.1.8",
+    "@mui/material": "^6.1.8",
+    "@mui/material-nextjs": "^6.1.8",
+    "@mui/x-date-pickers": "^7.22.3",
+    "@nextui-org/button": "^2.0.38",
+    "@nextui-org/date-input": "^2.1.4",
+    "@nextui-org/date-picker": "^2.1.8",
+    "@nextui-org/divider": "^2.0.32",
+    "@nextui-org/input": "^2.2.5",
+    "@nextui-org/react": "^2.4.8",
+    "@nextui-org/select": "^2.2.7",
+    "@nextui-org/system": "^2.2.6",
+    "@nextui-org/theme": "^2.2.11",
+    "autoprefixer": "^10.4.20",
+    "axios": "^1.7.8",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
+    "framer-motion": "^11.11.17",
+    "luxon": "^3.5.0",
+    "motion": "^11.13.1",
+    "mysql2": "^3.11.5",
+    "next": "15.0.3",
+    "postcss": "^8.4.49",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.16"
+  }
+}

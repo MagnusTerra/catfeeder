@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Custom CSS here */
+/* Ejemplo de globals.css limpio *//* styles/global.css */
+@font-face {
+  font-family: 'Another Typewriter';
+  src: url('/fonts/atwriter.ttf') format('truetype');
+}
+
+body {
+  font-family: Another Typewriter;
+}

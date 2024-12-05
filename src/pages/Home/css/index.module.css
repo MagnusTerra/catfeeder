@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Another Typewriter';
+    src: url('/fonts/atwriter.ttf') format('truetype');
+}
+
+
+.CatDiv {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #d5ab9a;
+    top: 0;
+    right: 0;
+    
+}
+
+.MainCat {
+    position: absolute;
+    width: 200px;
+    height: auto;
+
+    top: 42%;
+    right: 35%;
+}
+
+.MainCatMiau {
+    position: absolute;
+    width: 200px;
+    height: auto;
+
+    top: 22%;
+    left: 10%;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0; /* Imagen oculta */
+    }
+    50% {
+      opacity: 1; /* Imagen visible */
+    }
+  }
+  
+  .MainCatMiau {
+    animation: fadeInOut 3s infinite; /* Aparecer y desaparecer en bucle */
+  }
+  
+
+.MenuCatOption {
+    
+    position: absolute;
+    background-color: #efd9c6;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.MenuCatOption div h1{
+    position: relative;
+    margin-top: 180px;
+    left: 110px;
+    font-family: Another Typewriter;
+    color: #584236;
+
+    font-size: 35px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.MiauButtons {
+    position: relative;
+    left: 100px;
+}
+
+.MiauButtonsB {
+    position: relative;
+    width: 250px;
+    height: 100px;
+    font-size: 20px;
+    bottom: 5%;
+    margin-left: 20px;
+    border: none;
+    background-color: #cc767a;
+    color: white;
+    font-family: Another Typewriter;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    cursor: pointer;
+
+}
+
+.MiauButtonsB {
+    transition: transform 0.3s ease; /* Transición suave */
+  }
+  
+  .MiauButtonsB:hover {
+    transform: scale(1.1); /* Escala del 120% cuando el cursor está encima */
+  }
