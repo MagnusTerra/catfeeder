@@ -1,0 +1,23 @@
+.mainSC2 {
+    position: absolute;
+
+    width: 50%;
+
+    height: 50%;
+
+
+    top: 25%;
+    left: 45%;
+    background-color: white;
+
+    border: 4px solid #ffd699;
+    border-radius: 20px;
+
+    z-index: 5000;
+
+
+    text-align: center;
+    align-content: center;
+
+    font-size: 30px;
+}

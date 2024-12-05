@@ -27,6 +27,9 @@ export default function Feed() {
   const [isLoading, setIsLoading] = useState(true); // Track loading state
   const [openEdit, setOpenEdit] = useState(false);
   const [itemValue, setItemValue] = useState([]);
+  const [openModalS2, setOpenModalS2] = useState(false);
+
+
   const handleFeedList = async () => {
     try {
       const response = await axios.get('http://localhost:3000/api/feedlist');
@@ -44,6 +47,20 @@ export default function Feed() {
   const handleSelectedItem = (e) => {
     setOpenEdit(true);
     setItemValue(e)
+  }
+
+  const handleDeleteFeedHour = async (id) => {
+    try {
+      const response = await axios.delete('http://localhost:3000/api/feedlist', {
+        data: {
+          id: id, // Replace with the actual schedule ID you want to delete
+        },
+      })
+
+      setOpenModalS2(true)
+    } catch (error) {
+      console.log("error")
+    }
   }
 
   useEffect(() => {
@@ -81,7 +98,9 @@ export default function Feed() {
                       <td>
                         <button 
                         onClick={() => handleSelectedItem(i)}>Editar</button>
-                        <button>Eliminar</button>
+                        <button
+                        onClick={() => handleDeleteFeedHour(i.feeding_schedule_id)}
+                        >Eliminar</button>
                       </td>
                     </tr>
                   ))
@@ -112,7 +131,9 @@ export default function Feed() {
       </div>
 
       {openNewHour && <NewHour openModal={setOpenNewHour} />}
-      <EditHour open={openEdit} close={setOpenEdit} value={itemValue} />      
+      <EditHour open={openEdit} close={setOpenEdit} value={itemValue} />    
+      <DeleteHour open={openModalS2} close={setOpenModalS2}/>
+  
       <Navbar />
       
     </div>
@@ -123,7 +144,6 @@ export default function Feed() {
 
 const NewHour = ({ openModal }) => {
   const [openModalS, setOpenModalS] = useState(false);
-  const [openModalS2, setOpenModalS2] = useState(false);
 
   const [feedingTypes, setFeedingTypes] = useState([]);
   const [feedingTime, setFeedingTime] = useState(parseAbsoluteToLocal("2024-04-08T18:45:22Z")); // State for the feeding time
@@ -165,13 +185,7 @@ const NewHour = ({ openModal }) => {
 
   }
 
-  const handleDeleteFeedHour = async () => {
-    try {
-      const response = await axios.delete 
-    } catch (error) {
-      console.log("error")
-    }
-  }
+  
 
   useEffect(() => {
     handleFeedingTypes(); // Fetch feeding types when the component mounts
@@ -265,7 +279,6 @@ const NewHour = ({ openModal }) => {
         </div>
       </div>
       <SaveChange open={openModalS} close={setOpenModalS} />
-      <DeleteHour open={openModalS2} close={setOpenModalS2}/>
       
       
 
