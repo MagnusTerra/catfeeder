@@ -3,7 +3,7 @@ import styles from './css/SaveChanges.module.css'
 import { Button } from '@nextui-org/button'
 
 
-export const SaveChange =({open, close}) => {
+export default function SaveChange ({open, close}) {
 
     const handleCloseModal = () => {
         close(false)

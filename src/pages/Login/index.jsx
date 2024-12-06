@@ -21,7 +21,7 @@ export default function Login() {
     setLoading(true); // Disable the button while logging in
     setError(null); // Clear previous errors
     try {
-      const response = await axios.post('http://localhost:3000/api/login', {
+      const response = await axios.post(`http://${process.env.NEXT_PUBLIC_HOST}:3000/api/login`, {
         userName: userInfoLog.username,
         userPassword: userInfoLog.password
       });

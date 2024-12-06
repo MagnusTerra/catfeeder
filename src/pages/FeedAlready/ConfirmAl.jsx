@@ -1,9 +1,9 @@
-import styles from './css/SaveChanges.module.css'
-import styles2 from './css/delete.module.css'
+import styles from '../ListFeed/css/SaveChanges.module.css'
+import styles2 from '../ListFeed/css/delete.module.css'
 import { Button } from '@nextui-org/button'
 
 
-export default function DeleteHour ({open, close}) {
+export default function ConfirmAl ({open, close})  {
 
     const handleCloseModal = () => {
         close(false)
@@ -14,7 +14,7 @@ export default function DeleteHour ({open, close}) {
         return (
             <div className={styles.bodySC}>
                 <div className={styles2.mainSC2}>
-                    <h2>¡Registro eliminado con éxito!</h2>
+                    <h2>¡Accion realizada!</h2>
 
                     <Button
                         className={styles.closeSC}
@@ -24,6 +24,10 @@ export default function DeleteHour ({open, close}) {
                     </Button>
                 </div>
             </div>
+        )
+    } else {
+        return (
+            <div></div>
         )
     }
   

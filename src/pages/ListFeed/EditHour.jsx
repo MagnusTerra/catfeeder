@@ -16,7 +16,7 @@ import {Time} from "@internationalized/date";
 export default function EditHour ({openModal, open, close, value = []}) {
     const [openModalS, setOpenModalS] = useState(false);
     const [feedingTypes, setFeedingTypes] = useState([]);
-    const [feedingTime, setFeedingTime] = useState(null); // State for the feeding time
+    const [feedingTime, setFeedingTime] = useState(parseAbsoluteToLocal("2024-04-08T18:45:22Z")); // State for the feeding time
     const [selectedFeedingType, setSelectedFeedingType] = useState(null);
     const [grams, setGrams] = useState(null);
 
@@ -31,7 +31,7 @@ export default function EditHour ({openModal, open, close, value = []}) {
   
     const handleFeedingTypes = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/feedlist?request=types');
+        const response = await axios.get(`http://${process.env.NEXT_PUBLIC_HOST}:3000/api/feedlist?request=types`);
         setFeedingTypes(response.data.message || []);
       } catch (error) {
         console.error('Error fetching feeding types:', error);
@@ -40,18 +40,18 @@ export default function EditHour ({openModal, open, close, value = []}) {
   
     const handleNewFeedHour = async () => {
       try {
-        const response = await axios.post('http://localhost:3000/api/feedlist', {
+        const response = await axios.post(`http://${process.env.NEXT_PUBLIC_HOST}:3000/api/feedlist`, {
           type: 'update',
           id: value.feeding_schedule_id,
-          feedingTime: feedingTime || value.feeding_time,
-          frequency: selectedFeedingType || value.frequency_type,
-          foodAmount: grams || value.amount
+          feedingTime: feedingTime,
+          frequency: selectedFeedingType,
+          foodAmount: grams,
         })
          
         if (response.data.success) { 
           setOpenModalS(true)
         } else {
-          console.log('Error')
+          console.log(response.data.error)
         }
       } catch (error) {
         console.log(error.message)
@@ -81,7 +81,6 @@ export default function EditHour ({openModal, open, close, value = []}) {
     ];
   
     if (open) {
-        console.log(value)
         return (
             <div className={styles.NewHour}>
               <div className={styles.newHourClose}>
@@ -100,7 +99,6 @@ export default function EditHour ({openModal, open, close, value = []}) {
                     <TimeInput
                       label="Event Time"
                       className={styles.TimePicker}
-                      defaultValue={new Time(`${String(hours).padStart(2, '0')}`,  ` ${String(minutes).padStart(2, '0')}`)}
                       onChange={(e) => {
                         setFeedingTime(e.toString());
                       }}
@@ -143,13 +141,13 @@ export default function EditHour ({openModal, open, close, value = []}) {
                       className="max-w-xs"
                       value={grams}
                       placeholder={value.amount}
-                      onChange={(e) => setGrams(e.target.value)}
+                      onChange={(e) => {setGrams(e.target.value); console.log({ feedingTime, selectedFeedingType, grams })}}
                     />
                   </div>
         
                   <Button
                     className={styles.NHDSaveB}
-                    onClick={() => {console.log({ feedingTime, selectedFeedingType, grams });
+                    onClick={() => {
                     handleNewFeedHour()}}
                   >
                     Guardar

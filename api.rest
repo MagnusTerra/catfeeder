@@ -1,0 +1,28 @@
+POST http://localhost:3000/api/login HTTP/1.1
+content-type: application/json
+
+{
+    "userName": "Magnus",
+    "userPassword": "12345"
+}
+
+###
+
+POST http://localhost:3000/api/feedlist HTTP/1.1
+content-type: application/json
+
+{
+    "type": "create",
+    "feedingTime": "01:10:00",
+    "frequency" : 4,
+    "foodAmount" : "100"
+}
+
+###
+
+POST http://192.168.0.10:5000
+Content-Type: application/json
+
+{
+    "amount": 10
+}

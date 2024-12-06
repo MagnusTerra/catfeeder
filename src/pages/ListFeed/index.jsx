@@ -32,7 +32,7 @@ export default function Feed() {
 
   const handleFeedList = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/feedlist');
+      const response = await axios.get(`http://${process.env.NEXT_PUBLIC_HOST}:3000/api/feedlist`);
 
       console.log(response.data.message)
 
@@ -51,7 +51,7 @@ export default function Feed() {
 
   const handleDeleteFeedHour = async (id) => {
     try {
-      const response = await axios.delete('http://localhost:3000/api/feedlist', {
+      const response = await axios.delete(`http://${process.env.NEXT_PUBLIC_HOST}:3000/api/feedlist`, {
         data: {
           id: id, // Replace with the actual schedule ID you want to delete
         },
@@ -59,7 +59,7 @@ export default function Feed() {
 
       setOpenModalS2(true)
     } catch (error) {
-      console.log("error")
+      console.log(error)
     }
   }
 
@@ -157,7 +157,7 @@ const NewHour = ({ openModal }) => {
 
   const handleFeedingTypes = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/api/feedlist?request=types');
+      const response = await axios.get(`http://${process.env.NEXT_PUBLIC_HOST}:3000/api/feedlist?request=types`);
       setFeedingTypes(response.data.message || []);
     } catch (error) {
       console.error('Error fetching feeding types:', error);
@@ -166,7 +166,7 @@ const NewHour = ({ openModal }) => {
 
   const handleNewFeedHour = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/api/feedlist', {
+      const response = await axios.post(`http://${process.env.NEXT_PUBLIC_HOST}:3000/api/feedlist`, {
         type: 'create',
         feedingTime: feedingTime,
         frequency: selectedFeedingType,
