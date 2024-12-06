@@ -5,24 +5,23 @@ import {Button, Input} from "@nextui-org/react";
 
 import Image from "next/image";
 import { useState } from "react";
-import { ConfirmAl } from "./ConfirmAl";
+import ConfirmAl from "../../components/ConfirmAl"; // Importa ConfirmAl
 
 export default function FeedAlready () {
     const [grams, setGrams] = useState('');
     const [openModal, setOpenModal] = useState(false);
 
-    const hadleFeedAlready = ( ) => {
-
+    const hadleFeedAlready = async () => {
         try {
-            const response = axios.post(`http://${process.env.NEXT_PUBLIC_EL}:5000`, {
-                amount : grams
-            })
-
-            setOpenModal(true)
+            const response = await axios.post(`http://${process.env.NEXT_PUBLIC_EL}:5000`, {
+                amount: grams
+            });
+            setOpenModal(true);
         } catch (error) {
-            console.log("Error")
+            console.error("Error", error);
         }
-    }
+    };
+    
 
     return (
         <div>

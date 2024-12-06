@@ -1,5 +1,5 @@
 
-import styles from "./css/index.module.css";
+import styles from "../pages/ListFeed/css/index.module.css";
 import { useState, useEffect } from "react";
 import CloseIcon from '@mui/icons-material/Close';
 import { Input } from "@nextui-org/input";

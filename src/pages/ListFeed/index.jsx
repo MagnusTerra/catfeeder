@@ -7,12 +7,12 @@ import { Input } from "@nextui-org/input";
 import { TimeInput } from "@nextui-org/date-input";
 import { Button } from "@nextui-org/react";
 import { Select, SelectItem } from "@nextui-org/select";
-import { SaveChange } from "./SaveChange";
+import { SaveChange } from "../../components/SaveChange";
 import axios from "axios";
 import { parseAbsoluteToLocal, Time, ZonedDateTime } from "@internationalized/date";
 import { useDateFormatter } from "@react-aria/i18n";
 import EditHour from "./EditHour";
-import { DeleteHour } from "./DeleteHour";
+import { DeleteHour } from "../../components/DeleteHour";
 
 
 export default function Feed() {
