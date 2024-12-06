@@ -6,14 +6,14 @@ import { Input } from "@nextui-org/input";
 import { TimeInput } from "@nextui-org/date-input";
 import { Button } from "@nextui-org/react";
 import { Select, SelectItem } from "@nextui-org/select";
-import { SaveChange } from "./SaveChange";
 import axios from "axios";
 import { parseAbsoluteToLocal} from "@internationalized/date";
 import { useDateFormatter } from "@react-aria/i18n";
 import {Time} from "@internationalized/date";
+import SaveChange from "./SaveChange";
 
 
-export default function EditHour ({openModal, open, close, value = []}) {
+const EditHour = ({openModal, open, close, value = []}) => {
     const [openModalS, setOpenModalS] = useState(false);
     const [feedingTypes, setFeedingTypes] = useState([]);
     const [feedingTime, setFeedingTime] = useState(parseAbsoluteToLocal("2024-04-08T18:45:22Z")); // State for the feeding time
@@ -161,3 +161,5 @@ export default function EditHour ({openModal, open, close, value = []}) {
 
    
   };
+
+export default EditHour;

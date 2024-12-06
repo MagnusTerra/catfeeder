@@ -4,7 +4,7 @@ import styles2 from '../pages/ListFeed/css/delete.module.css';
 import { Button } from '@nextui-org/button'
 
 
-export default function DeleteHour ({open, close}) {
+const DeleteHour = ({open, close}) => {
 
     const handleCloseModal = () => {
         close(false)
@@ -29,3 +29,5 @@ export default function DeleteHour ({open, close}) {
     }
   
 }
+
+export default DeleteHour;

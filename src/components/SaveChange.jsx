@@ -2,8 +2,7 @@ import styles from '../pages/ListFeed/css/SaveChanges.module.css'
 
 import { Button } from '@nextui-org/button'
 
-
-export default function SaveChange ({open, close}) {
+const SaveChange = ({open, close}) => {
 
     const handleCloseModal = () => {
         close(false)
@@ -28,3 +27,5 @@ export default function SaveChange ({open, close}) {
     }
   
 }
+
+export default SaveChange;
