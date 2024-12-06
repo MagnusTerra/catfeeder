@@ -28,7 +28,7 @@ export default function FeedAlready () {
            <div className={styles.infoCat}> 
                 <Image 
                 className={styles.catImgInfo}
-                src={"/images/Imágen 5.png"} width={200} height={200}/>
+                src={"/images/Img5.png"} width={200} height={200}/>
 
                 <Image 
                 className={styles.cantImgLog}

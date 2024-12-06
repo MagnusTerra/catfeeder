@@ -116,7 +116,7 @@ export default function Feed() {
 
         <div className={styles.catHoursAlert}>
           <div style={{ display: "flex" }}>
-            <Image src={'/images/Imágen 1.png'} width={100} height={100} />
+            <Image src={'/images/Img1.png'} width={100} height={100} />
             <h2 style={{ marginTop: '50px' }}>Queda un 60% del alimento en reservas</h2>
             <button onClick={handleOpenHour}>Añadir nuevo horario</button>
           </div>
@@ -125,7 +125,7 @@ export default function Feed() {
 
       <div className={styles.nothingCat}>
         <div className={styles.faceCat}>
-          <Image className={styles.faceCatImg} src={'/images/Imágen 4.png'} width={200} height={200} />
+          <Image className={styles.faceCatImg} src={'/images/Img4.png'} width={200} height={200} />
           <h2 className={styles.footerTitle}>¿Qué horario podría poner mi amo para comer? </h2>
         </div>
       </div>

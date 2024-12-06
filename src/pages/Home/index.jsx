@@ -25,7 +25,7 @@ export default function Home () {
                     
                 <div>
                     <Image src={'/images/miau2.png'} className={styles.MainCatMiau} width={200} height={200}/>           
-                    <Image src={'/images/Imágen 2.png'} className={styles.MainCat} width={200} height={200}/>
+                    <Image src={'/images/Img2.png'} className={styles.MainCat} width={200} height={200}/>
                 </div>
             </div>
 

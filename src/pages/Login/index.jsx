@@ -71,7 +71,7 @@ export default function Login() {
   return (
     <div className={style.loginBody}>
       <Image
-        src={isShaking ? "/images/IMG_2800.PNG" : "/images/Imágen 3.png"}
+        src={isShaking ? "/images/IMG_2800.PNG" : "/images/Img3.png"}
         alt="Logo"
         width={300}
         height={200}
@@ -82,7 +82,7 @@ export default function Login() {
       <div className={style.loginMainCo}>
         <div className={style.loginCat}>
           <Image
-            src="/images/Imágen 6.png"
+            src="/images/Img6.png"
             alt="MainLogo"
             width={200}
             height={200}
@@ -104,7 +104,7 @@ export default function Login() {
             />
             {inputSelected1 && (
               <Image
-                src={'/images/Imágen 5.png'}
+                src={'/images/Img5.png'}
                 width={40}
                 height={30}
                 style={{
@@ -132,7 +132,7 @@ export default function Login() {
             />
             {inputSelected2 && (
               <Image
-                src={'/images/Imágen 5.png'}
+                src={'/images/Img5.png'}
                 width={40}
                 height={30}
                 style={{
